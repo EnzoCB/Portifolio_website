@@ -25,13 +25,12 @@
     </nav>
 
     <main id="inicio" class="cabecalho">
-      <div>
-        <!-- colocar imagem de perfil-->
-        <img src alt="Foto de Enzo Coutinho Barbosa" class="foto-perfil" />
-        <h1>Enzo Coutinho Barbosa</h1>
-        <p>Estudante de Ciência da Computação</p>
-      </div>
+      <!-- colocar imagem de perfil-->
+      <img src alt="Foto de Enzo Coutinho Barbosa" class="foto-perfil" />
+      <h1>Enzo Coutinho Barbosa</h1>
+      <p>Estudante de Ciência da Computação</p>
     </main>
+
     <section id="sobre" class="sobre">
       <h2 class="sobre-titulo">Sobre mim</h2>
       <div class="sobre-caixa">
@@ -89,12 +88,27 @@
       <h2 class="contatos-titulo">Contatos</h2>
       <form class="formulario-contato" id="formulario">
         <div class="nome-form">
-          <input placeholder="Nome" class="campo-form" />
+          <input
+            type="text"
+            placeholder="Nome"
+            name="usuario_nome"
+            required
+            class="contato__input"
+          />
+          <input
+            type="email"
+            placeholder="Email"
+            name="usuario_email"
+            required
+            class="contato__input"
+          />
         </div>
         <div class="grupo-form">
           <textarea
-            class="text-form"
             placeholder="Digite sua Mensagem"
+            name="usuario_mensagem"
+            required
+            class="contato__input"
           ></textarea>
         </div>
       </form>
