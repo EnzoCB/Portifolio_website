@@ -94,3 +94,69 @@ body {
   text-align: center;
   font-size: 1.2rem;
 }
+
+.contato__container {
+  row-gap: 4rem;
+}
+
+.contato__form {
+  position: relative;
+  row-gap: 1rem;
+}
+
+.contato__input {
+  width: 100%;
+  background: var(--escuro);
+  color: var(--claro);
+  border: 2px solid var(--primaria);
+  outline: none;
+  padding: 1.25rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.contato__input::placeholder {
+  color: #857a7a;
+  transition: color 0.4s;
+}
+
+.contato__input:focus::placeholder {
+  color: var(--primaria);
+}
+
+.contato__input:autofill {
+  transition:
+    background-color 6000s,
+    color 6000s;
+}
+
+.contato__area {
+  height: 10rem;
+  resize: none;
+}
+
+.contact__form .button {
+  cursor: pointer;
+}
+
+.contato__mensagem {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 0.813rem;
+}
+
+.contato__dados {
+  row-gap: 1rem;
+}
+
+.contato__endereco {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  font-style: initial;
+}
+
+.contato__endereco i {
+  font-size: 1.5rem;
+  color: var(--primaria);
+}

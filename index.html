@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <title>Enzo CB | Portifólio</title>
   </head>
@@ -84,10 +85,10 @@
       </div>
     </section>
 
-    <section id="contato" class="contato">
+    <section id="contato" class="sessao contato">
       <h2 class="contatos-titulo">Contatos</h2>
-      <form class="formulario-contato" id="formulario">
-        <div class="nome-form">
+      <div class="contato__container container grade">
+      <form action="" class="contact__from grade"  id="contato-form">
           <input
             type="text"
             placeholder="Nome"
@@ -110,8 +111,36 @@
             required
             class="contato__input"
           ></textarea>
+
+          <button type="submit" class="button">Enviar Mensagem</button>
+
+          <p class="contato__mensagem" id="contato__mensagem">
+          </p>
         </div>
       </form>
+      <div class="contato__conteudo grade">
+        <div class="contato__dados grade">
+          <address class="contato__endereco">
+            <i class="ri-mail-fill"></i>
+            <span>enzocoutinhobarbosa@gmail.com</span>
+          </address>
+
+          <address class="contato__endereco">
+            <i class="ri-smartphone-fill"></i>
+            <span>+55 (21) 97153-3930</span>
+          </adress>
+
+          <address class="contato__endereco">
+            <i class="ri-map-pin-2-fill"></i>
+            <span>Rio de Janeiro, Brasil</span>
+          </address>
+
+          <address class="contato__endereco">
+            <i class="ri-time-fill"></i>
+            <span>Disponível: Seg-Sex, à tarde (ajustável)</span>
+          </address>
+        </div>
+      </div>
     </section>
   </body>
 </html>
