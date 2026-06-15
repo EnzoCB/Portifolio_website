@@ -160,3 +160,66 @@ body {
   font-size: 1.5rem;
   color: var(--primaria);
 }
+
+.contato__social {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.contato__link {
+  color: var(--claro);
+  font-size: 1.5rem;
+  transition:
+    transform 0.4s,
+    color 0.4s;
+}
+
+.contato__link:hover {
+  transform: translateY(-0.25rem);
+  color: var(--primaria);
+}
+
+/* =========================================
+   RESPONSIVIDADE (Telas até 768px - Celulares)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. Ajustes do Menu de Navegação */
+  .menu {
+    gap: 1rem; /* Diminui o espaço gigante entre os links */
+    flex-wrap: wrap; /* Se a tela for muito fina, os links descem de linha em vez de vazar da tela */
+  }
+
+  .navegacao {
+    padding: 1rem; /* Reduz o tamanho da barra no celular */
+  }
+
+  /* 2. Ajustes de Texto e Espaçamento Geral */
+  .sobre {
+    padding: 4rem 1rem; /* Menos espaço em branco nas laterais */
+  }
+
+  .sobre-titulo {
+    font-size: 2rem; /* Títulos um pouco menores para caberem bem */
+  }
+
+  .sobre-caixa {
+    padding: 1.5rem;
+  }
+
+  /* 3. Ajuste do Formulário e Contatos (A classe que faltava) */
+  .grade {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .contato__container {
+    grid-template-columns: 1fr; /* Força o formulário e os dados a ficarem em 1 coluna só (empilhados) */
+  }
+
+  .inputs-form {
+    display: grid;
+    grid-template-columns: 1fr; /* Empilha o input de Nome e de Email */
+    gap: 1rem;
+  }
+}
