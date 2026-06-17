@@ -95,6 +95,13 @@ body {
   font-size: 1.2rem;
 }
 
+.contatos-titulo {
+  font-size: 3rem;
+  color: var(--claro);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
 .contato__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -131,10 +138,9 @@ body {
   color: var(--primaria);
 }
 
-.contato__input:autofill {
-  transition:
-    background-color 6000s,
-    color 6000s;
+.contato__input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--escuro) inset;
+  -webkit-text-fill-color: var(--claro);
 }
 
 .contato__area {
@@ -142,9 +148,13 @@ body {
   resize: none;
 }
 
+textarea.contato__input {
+  resize: none;
+}
+
 .button {
   background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-  color: #fff;
+  color: var(--escuro);
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -158,18 +168,27 @@ body {
   width: 100%;
 }
 
+.button:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
 .contact__form .button {
   cursor: pointer;
 }
 
 .contato__mensagem {
-  position: absolute;
-  bottom: -2rem;
   font-size: 0.813rem;
+  min-height: 1.2rem;
+  text-align: center; /* ← centraliza o texto */
+  font-family: inherit;
 }
 
 .contato__dados {
-  row-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
 }
 
 .contato__endereco {
@@ -182,6 +201,7 @@ body {
 .contato__endereco i {
   font-size: 1.5rem;
   color: var(--primaria);
+  flex-shrink: 0;
 }
 
 .contato__social {
@@ -192,6 +212,7 @@ body {
 .contato__link {
   color: var(--claro);
   font-size: 1.5rem;
+  text-decoration: none;
   transition:
     transform 0.4s,
     color 0.4s;
@@ -200,6 +221,17 @@ body {
 .contato__link:hover {
   transform: translateY(-0.25rem);
   color: var(--primaria);
+}
+
+.contato__conteudo {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem; /* vai para a esquerda */
+}
+
+.contato__form {
+  order: 2; /* vai para a direita */
 }
 
 /* =========================================
@@ -236,11 +268,9 @@ body {
     gap: 1.5rem;
   }
 
-  .contato__container.grade {
-    grid-template-columns: repeat(
-      2,
-      350px
-    ); /* Força o formulário e os dados a ficarem em 1 coluna só (empilhados) */
+  .contato__container {
+    grid-template-columns: 1fr; /* formulário em cima, dados embaixo */
+    gap: 2.5rem;
   }
 
   .inputs-form {

@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Enzo CB | Portfólio</title>
   </head>
@@ -20,7 +23,7 @@
           <a href="#projetos" class="menu-link">Projetos</a>
         </li>
         <li>
-          <a href="#contato" class="menu-link">Contato</a>
+          <a href="#contato" class="menu-link">Contatos</a>
         </li>
       </ul>
     </nav>
@@ -85,10 +88,25 @@
       </div>
     </section>
 
-    <section id="contato" class="sessao contato">
+    <section id="certificacoes" class="certificacoes">
+      <h2 class="certificacoes-titulo">Certificações</h2>
+      <div class="certificado-caixa">
+        <div class="certificado-card">
+          <!-- colocar imagem dos projetos-->
+          <img src alt="certificado 1" class="certificado-imagem" />
+          <h3 class="info-certificado">Certificado 1</h3>
+          <p class="paragrafo-certificado">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+            nesciunt eius laborum unde in est illum facilis tempora provident
+            eveniet ea sed quia, quas voluptates natus modi voluptatibus,
+            numquam voluptatum.
+          </p>
+        </div>
+
+    <section id="contato" class="contato">
       <h2 class="contatos-titulo">Contatos</h2>
       <div class="contato__container">
-      <form action="" class="contact__from grade"  id="contato-form">
+        <form action="" class="contato__form" id="contato-form">
           <input
             type="text"
             placeholder="Nome"
@@ -98,7 +116,7 @@
           />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Seu Email"
             name="usuario_email"
             required
             class="contato__input"
@@ -107,61 +125,68 @@
             placeholder="Digite sua Mensagem"
             name="usuario_mensagem"
             required
-            class="contato__input"
+            class="contato__input contato__area"
           ></textarea>
 
           <button type="submit" class="button">Enviar Mensagem</button>
 
-          <p class="contato__mensagem" id="contato__mensagem">
-          </p>
-        </div>
-      </form>
-      <div class="contato__conteudo grade">
-        <div class="contato__dados grade">
-          <address class="contato__endereco">
-            <i class="ri-mail-fill"></i>
-            <span>enzocoutinhobarbosa@gmail.com</span>
-          </address>
+          <p class="contato__mensagem" id="contato__mensagem"></p>
+        </form>
+        <div class="contato__conteudo">
+          <div class="contato__dados">
+            <address class="contato__endereco">
+              <i class="ri-mail-fill"></i>
+              <span>enzocoutinhobarbosa@gmail.com</span>
+            </address>
 
-          <address class="contato__endereco">
-            <i class="ri-smartphone-fill"></i>
-            <span>+55 (21) 97153-3930</span>
-          </adress>
+            <address class="contato__endereco">
+              <i class="ri-smartphone-fill"></i>
+              <span>+55 (21) 97153-3930</span>
+            </address>
 
-          <address class="contato__endereco">
-            <i class="ri-map-pin-2-fill"></i>
-            <span>Rio de Janeiro, Brasil</span>
-          </address>
+            <address class="contato__endereco">
+              <i class="ri-map-pin-2-fill"></i>
+              <span>Rio de Janeiro, Brasil</span>
+            </address>
 
-          <address class="contato__endereco">
-            <i class="ri-time-fill"></i>
-            <span>Disponível: Seg-Sex, à tarde (ajustável)</span>
-          </address>
-        </div>
-        <div class="contato__social">
+            <address class="contato__endereco">
+              <i class="ri-time-fill"></i>
+              <span>Disponível: Seg-Sex, à tarde (ajustável)</span>
+            </address>
+          </div>
+          <div class="contato__social">
+            <a
+              href="https://wa.me/5521971533930"
+              target="_blank"
+              class="contato__link"
+            >
+              <i class="ri-whatsapp-fill"></i>
+            </a>
 
-          <a href="https://wa.me/5521971533930" target="_blank" class="contato__link">
-            <i class="ri-whatsapp-fill"></i>
-          </a>
+            <a
+              href="https://www.instagram.com/enzo_cb10?igsh=M2Rub3RrdTR1aGh1&utm_source=qr"
+              target="_blank"
+              class="contato__link"
+            >
+              <i class="ri-instagram-fill"></i>
+            </a>
 
-          <a href="https://www.instagram.com/enzo_cb10?igsh=M2Rub3RrdTR1aGh1&utm_source=qr" target="_blank" class="contato__link">
-            <i class="ri-instagram-fill"></i>
-          </a>
-
-          <a href="https://t.me/EnzoCB" target="_blank" class="contato__link">
-            <i class="ri-telegram-fill"></i>
-          </a>
-          
+            <a href="https://t.me/EnzoCB" target="_blank" class="contato__link">
+              <i class="ri-telegram-fill"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!--EmailJS-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
 
     <script type="text/javascript">
-    emailjs.init("PKNxT9V2OTmkZX96v");
+      emailjs.init("PKNxT9V2OTmkZX96v");
     </script>
 
     <script src="main.js"></script>
