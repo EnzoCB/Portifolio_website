@@ -129,7 +129,7 @@ h1 {
 .inicio__social {
   display: flex;
   column-gap: 1.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 .inicio__link {
@@ -248,10 +248,13 @@ textarea.contato__input {
 .button:hover {
   opacity: 0.88;
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px var(--secundaria);
 }
 
 .contato__form .button {
   cursor: pointer;
+  width: auto;
+  align-self: center;
 }
 
 .contato__mensagem {
