@@ -69,6 +69,83 @@ body {
   width: 100%;
 }
 
+.cabecalho {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 6rem;
+}
+
+.foto-perfil {
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 20px var(--secundaria);
+  border-radius: 50%;
+  border: 4px solid var(--primaria);
+  object-fit: cover;
+  object-position: center 10%;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: var(--primaria);
+  font-weight: bold;
+  margin: 20px;
+}
+
+.cabecalho-sub-titulo {
+  font-size: 1.5rem;
+  color: var(--claro);
+}
+
+.inicio__button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.inicio__button .button {
+  display: inline-flex;
+  justify-content: center;
+  background-color: var(--primaria);
+  color: var(--maisEscuro);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  transition:
+    box-shadow 0.4s,
+    transform 0.4s;
+}
+
+.inicio__button .button:hover {
+  box-shadow: 0 8px 24px var(--secundaria);
+}
+
+.inicio__social {
+  display: flex;
+  column-gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.inicio__link {
+  color: var(--claro);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition:
+    transform 0.4s,
+    color 0.4s;
+}
+
+.inicio__link:hover {
+  transform: translateY(-0.25rem);
+  color: var(--primaria);
+}
+
 .sobre {
   padding: 6rem 2rem;
 }
@@ -154,7 +231,7 @@ textarea.contato__input {
 
 .button {
   background: linear-gradient(90deg, var(--primaria), var(--secundaria));
-  color: var(--escuro);
+  color: var(--maisEscuro);
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
@@ -173,7 +250,7 @@ textarea.contato__input {
   transform: translateY(-2px);
 }
 
-.contact__form .button {
+.contato__form .button {
   cursor: pointer;
 }
 
@@ -234,48 +311,144 @@ textarea.contato__input {
   order: 2; /* vai para a direita */
 }
 
-/* =========================================
-   RESPONSIVIDADE (Telas até 768px - Celulares)
-   ========================================= */
+/* =============================================
+   RESPONSIVO — TABLET (≤ 1024px)
+   ============================================= */
+@media (max-width: 1024px) {
+  .projetos-caixa {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
+  .certificado-caixa {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cabecalho h1 {
+    font-size: 2.2rem;
+  }
+
+  .sobre-titulo,
+  .projetos-titulo,
+  .certificacoes-titulo,
+  .contatos-titulo {
+    font-size: 2.4rem;
+  }
+}
+
+/* =============================================
+   RESPONSIVO — MOBILE (≤ 768px)
+   ============================================= */
 @media (max-width: 768px) {
-  /* 1. Ajustes do Menu de Navegação */
+  /* Navegação */
   .menu {
-    gap: 1rem; /* Diminui o espaço gigante entre os links */
-    flex-wrap: wrap; /* Se a tela for muito fina, os links descem de linha em vez de vazar da tela */
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu-link {
+    font-size: 0.9rem;
   }
 
   .navegacao {
-    padding: 1rem; /* Reduz o tamanho da barra no celular */
+    padding: 1rem;
   }
 
-  /* 2. Ajustes de Texto e Espaçamento Geral */
+  /* Hero */
+  .cabecalho {
+    padding: 8rem 1.5rem 4rem;
+  }
+
+  .foto-perfil {
+    width: 120px;
+    height: 120px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.9rem;
+  }
+
+  .cabecalho p {
+    font-size: 1rem;
+  }
+
+  /* Sobre */
   .sobre {
-    padding: 4rem 1rem; /* Menos espaço em branco nas laterais */
+    padding: 4rem 1rem;
   }
 
   .sobre-titulo {
-    font-size: 2rem; /* Títulos um pouco menores para caberem bem */
+    font-size: 2rem;
   }
 
   .sobre-caixa {
     padding: 1.5rem;
   }
 
-  /* 3. Ajuste do Formulário e Contatos (A classe que faltava) */
-  .grade {
-    display: grid;
-    gap: 1.5rem;
+  .sobre-paragrafo {
+    font-size: 1rem;
+  }
+
+  /* Projetos */
+  .projetos {
+    padding: 4rem 1rem;
+  }
+
+  .projetos-titulo {
+    font-size: 2rem;
+  }
+
+  .projetos-caixa {
+    grid-template-columns: 1fr;
+  }
+
+  /* Certificações */
+  .certificacoes {
+    padding: 4rem 1rem;
+  }
+
+  .certificacoes-titulo {
+    font-size: 2rem;
+  }
+
+  .certificado-caixa {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contato */
+  .contato {
+    padding: 4rem 1rem;
+  }
+
+  .contatos-titulo {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
   }
 
   .contato__container {
-    grid-template-columns: 1fr; /* formulário em cima, dados embaixo */
+    grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 
-  .inputs-form {
-    display: grid;
-    grid-template-columns: 1fr; /* Empilha o input de Nome e de Email */
-    gap: 1rem;
+  /* No mobile: form em cima, dados embaixo */
+  .contato__form {
+    order: 1;
+  }
+
+  .contato__conteudo {
+    order: 2;
+  }
+}
+
+/* =============================================
+   ACESSIBILIDADE — sem animações
+   ============================================= */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
   }
 }
