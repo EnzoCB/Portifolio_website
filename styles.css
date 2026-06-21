@@ -162,9 +162,10 @@ h1 {
   max-width: 800px;
   margin: 0 auto;
   border-radius: 16px;
-  border: 1px solid var(--vidro);
+  border: 1px solid var(--primaria);
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px var(--secundaria);
 }
 
 .sobre-paragrafo {
@@ -260,8 +261,13 @@ h1 {
   color: #aaa7a7;
 }
 
-.projetos__card:hover .projetos__img {
-  transform: scale(1.2);
+.projetos__card {
+  transition: transform 0.4s;
+}
+
+.projetos__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--secundaria);
 }
 
 .contatos-titulo {
