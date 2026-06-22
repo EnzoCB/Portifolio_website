@@ -258,7 +258,7 @@ h1 {
 }
 
 .projetos__button:hover {
-  color: #aaa7a7;
+  color: var(--secundaria);
 }
 
 .projetos__card {
