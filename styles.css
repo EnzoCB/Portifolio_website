@@ -270,6 +270,105 @@ h1 {
   box-shadow: 0 0 20px var(--secundaria);
 }
 
+.certificados__titulo {
+  font-size: 3rem;
+  color: var(--claro);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.certificado__caixa {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificado__card {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 16px var(--maisEscuro);
+  transition:
+    transform 0.4s,
+    box-shadow 0.4s;
+  isolation: isolate;
+}
+
+.certificados__img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.certificados__dados {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+  display: grid;
+  place-content: center;
+  row-gap: 0.5rem;
+  text-align: center;
+  padding: 0 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.certificados__nome {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--claro);
+  margin-bottom: 0.25rem;
+}
+
+.certificados__descricao {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-bottom: 0.75rem;
+}
+
+.button__ghost {
+  display: inline-flex;
+  justify-content: center;
+  background-color: transparent;
+  color: var(--secundaria);
+  border: 2px solid var(--secundaria);
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-family: inherit;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.button__ghost:hover {
+  box-shadow: 0 0 12px var(--secundaria);
+}
+
+.certificados__dados .button__ghost {
+  justify-self: center;
+  margin-top: 0.5rem;
+}
+
+.certificado__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--secundaria);
+}
+
+.certificado__card:hover .certificados__dados {
+  opacity: 1;
+  pointer-events: initial;
+}
+
 .contatos-titulo {
   font-size: 3rem;
   color: var(--claro);

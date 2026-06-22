@@ -7,6 +7,10 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Enzo CB | Portfólio</title>
   </head>
@@ -201,19 +205,29 @@
     </section>
 
     <section id="certificados" class="certificados">
-      <h2 class="certificados-titulo">Certificados</h2>
-      <div class="certificado-caixa">
-        <div class="certificado-card">
-          <!-- colocar imagem dos projetos-->
-          <img src alt="certificado 1" class="certificado-imagem" />
-          <h3 class="info-certificado">Certificado 1</h3>
-          <p class="paragrafo-certificado">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-            nesciunt eius laborum unde in est illum facilis tempora provident
-            eveniet ea sed quia, quas voluptates natus modi voluptatibus,
-            numquam voluptatum.
-          </p>
-        </div>
+      <h2 class="certificados__titulo">Certificados</h2>
+      <div class="certificado__caixa">
+        <article class="certificado__card">
+          <img
+            src="img/Certificado_WiseUp_Imagem.jpg"
+            alt="image"
+            class="certificados__img"
+            style="object-position: center top"
+          />
+
+          <div class="certificados__dados">
+            <h3 class="certificados__nome">Curso de Inglês</h3>
+            <p class="certificados__descricao">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <a
+              href="img/Certificado_WiseUp_Imagem.jpg"
+              target="_blank"
+              class="button__ghost glightbox"
+              >Ver Certificado</a
+            >
+          </div>
+        </article>
       </div>
     </section>
 
@@ -302,7 +316,7 @@
     <script type="text/javascript">
       emailjs.init("PKNxT9V2OTmkZX96v");
     </script>
-
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

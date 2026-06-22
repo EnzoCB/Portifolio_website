@@ -25,3 +25,7 @@ const sendEmail = (e) => {
 };
 
 contatoForm.addEventListener("submit", sendEmail);
+
+const lightbox = GLightbox({
+  selector: ".glightbox",
+});
