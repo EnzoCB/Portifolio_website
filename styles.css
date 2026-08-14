@@ -94,7 +94,7 @@ body {
 }
 
 h1,
-h2{
+h2 {
   font-size: 3.5rem;
   color: var(--primaria);
   font-weight: bold;
@@ -539,11 +539,11 @@ textarea.contato__input {
    RESPONSIVO — TABLET (≤ 1024px)
    ============================================= */
 @media (max-width: 1024px) {
-  .projetos-caixa {
+  .projetos__caixa {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .certificado-caixa {
+  .certificado__caixa {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -622,7 +622,7 @@ textarea.contato__input {
     font-size: 2rem;
   }
 
-  .projetos-caixa {
+  .projetos__caixa {
     grid-template-columns: 1fr;
   }
 
@@ -631,11 +631,11 @@ textarea.contato__input {
     padding: 4rem 1rem;
   }
 
-  .certificacoes-titulo {
+  .certificados__titulo {
     font-size: 2rem;
   }
 
-  .certificado-caixa {
+  .certificado__caixa {
     grid-template-columns: 1fr;
   }
 
